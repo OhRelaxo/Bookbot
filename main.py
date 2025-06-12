@@ -13,10 +13,11 @@ def main():
     print("============ BOOKBOT ============ \n"
           "Analyzing book found at books/frankenstein.txt...\n"
           "----------- Word Count ----------")
-    print(f"{words_in_text} words found in the document")
+    print(f"Found {words_in_text} total words")
     print("--------- Character Count -------")
     for dicts in sorted_list:
-        print(f"{dicts["char"]}: {dicts["num"]}")
+        if dicts["char"].isalpha():
+            print(f"{dicts["char"]}: {dicts["num"]}")
     print("============= END ===============")
 
 main()
